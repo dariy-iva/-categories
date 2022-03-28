@@ -1,0 +1,22 @@
+.categories {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+.categories__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.categories__item {
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.categories__item:not(:last-child) {
+  border-bottom: 2px solid var(--color-bcg-gray);
+}

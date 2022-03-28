@@ -1,0 +1,43 @@
+@import url(./vendor/normalize.css);
+@import url(./vendor/fonts/Verdana/verdana.css);
+
+.body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page {
+  font-family: "Verdana", Arial, sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  width: 100%;
+  min-width: 320px;
+  max-width: 1280px;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  --black: #000;
+  --white: #fff;
+  --border-green: #00B956;
+  --text-blue: #34AAF2;
+  --text-gray: #5e5e5e;
+  --color-bcg-light-gray: #f9f9f9;
+  --color-bcg-gray: #dbdbdb;
+  background-color: var(--color-bcg-gray);
+}
+
+.link-hover {
+  transition: opacity 0.3s;
+}
+
+.link-hover:hover {
+  opacity: 0.6;
+}

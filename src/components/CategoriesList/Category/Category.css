@@ -1,0 +1,36 @@
+.category {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.category__button {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.2;
+  font-weight: normal;
+  color: var(--text-gray);
+  border: none;
+  cursor: pointer;
+  position: relative;
+  background: none;
+  text-align: start;
+  padding: 0 25px 0 0;
+  margin: 20px 0;
+}
+
+.category__button::after {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 10px;
+  background: url(../../../images/downarrow_icon.svg) no-repeat center;
+  background-size: cover;
+  position: absolute;
+  right: 0;
+  top: 6px;
+}
+
+.category__button_open::after {
+  transform: rotate(180deg);
+}
