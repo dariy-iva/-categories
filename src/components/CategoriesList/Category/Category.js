@@ -2,8 +2,10 @@ import React from "react";
 import "./Category.css";
 import QuestionsList from "../../QuestionsList/QuestionsList";
 
-export default function Category({ categoryData }) {
-  const { title, questions } = categoryData;
+export default function Category(props) {
+  const { category, categoryIndex, onClickFeedbackButton, categoriesList } =
+    props;
+  const { title, questions, raiting } = category;
   const [isOpenQuestionsList, setIsOpenQuestionsList] = React.useState(false);
   const buttonClass = `category__button link-hover ${
     isOpenQuestionsList ? "category__button_open" : ""
@@ -17,8 +19,17 @@ export default function Category({ categoryData }) {
     <div className="category">
       <button type="button" className={buttonClass} onClick={handleButtonClick}>
         {title || ""}
+        <span>&nbsp;{`(raiting: ${raiting})`}</span>
       </button>
-      {isOpenQuestionsList && <QuestionsList questionsList={questions} />}
+      {isOpenQuestionsList && (
+        <QuestionsList
+          categoriesList={categoriesList}
+          questionsList={questions}
+          category={category}
+          categoryIndex={categoryIndex}
+          onClickFeedbackButton={onClickFeedbackButton}
+        />
+      )}
     </div>
   );
 }

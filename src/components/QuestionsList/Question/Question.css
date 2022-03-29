@@ -1,5 +1,18 @@
 .question {
-  flex-grow: 1;
+  position: relative;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.question_active {
+  background-color: var(--color-bcg-light-gray);
+}
+
+.question::before {
+  color: var(--text-blue);
+  content: "-";
+  position: absolute;
+  left: 5px;
 }
 
 .question__text {
@@ -34,7 +47,7 @@
 
 .question___answer {
   margin: 0;
-  padding: 20px 0 40px;
+  padding: 20px 0;
   color: var(--text-gray);
 }
 

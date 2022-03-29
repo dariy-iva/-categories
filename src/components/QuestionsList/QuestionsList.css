@@ -4,15 +4,3 @@
   list-style-type: none;
   padding: 0 10px;
 }
-
-.questions__item {
-  padding: 20px;
-  display: flex;
-  background-color: var(--color-bcg-light-gray);
-}
-
-.questions__item::before {
-  color: var(--text-blue);
-  content: "-";
-  margin-right: 5px;
-}
