@@ -4,24 +4,28 @@ export const categoriesData = [
     raiting: 0,
     questions: [
       {
+        id: 1,
         question: "Вопрос 1",
         answer: "Ответ 1",
         reviewSent: false,
         raiting: 0,
       },
       {
+        id: 2,
         question: "Вопрос 2",
         answer: "Ответ 2",
         reviewSent: false,
         raiting: 0,
       },
       {
+        id: 3,
         question: "Вопрос 3",
         answer: "Ответ 3",
         reviewSent: false,
         raiting: 0,
       },
       {
+        id: 4,
         question: "Вопрос 4",
         answer: "Ответ 4",
         reviewSent: false,
@@ -34,24 +38,28 @@ export const categoriesData = [
     raiting: 0,
     questions: [
       {
+        id: 5,
         question: "Вопрос 1",
         answer: "Ответ 1",
         reviewSent: false,
         raiting: 0,
       },
       {
+        id: 6,
         question: "Вопрос 2",
         answer: "Ответ 2",
         reviewSent: false,
         raiting: 0,
       },
       {
+        id: 7,
         question: "Вопрос 3",
         answer: "Ответ 3",
         reviewSent: false,
         raiting: 0,
       },
       {
+        id: 8,
         question: "Вопрос 4",
         answer: "Ответ 4",
         reviewSent: false,
@@ -64,24 +72,28 @@ export const categoriesData = [
     raiting: 0,
     questions: [
       {
+        id: 9,
         question: "Вопрос 1",
         answer: "Ответ 1",
         reviewSent: false,
         raiting: 0,
       },
       {
+        id: 10,
         question: "Вопрос 2",
         answer: "Ответ 2",
         reviewSent: false,
         raiting: 0,
       },
       {
+        id: 11,
         question: "Вопрос 3",
         answer: "Ответ 3",
         reviewSent: false,
         raiting: 0,
       },
       {
+        id: 12,
         question: "Вопрос 4",
         answer: "Ответ 4",
         reviewSent: false,
@@ -94,24 +106,28 @@ export const categoriesData = [
     raiting: 5,
     questions: [
       {
+        id: 13,
         question: "Вопрос 1",
         answer: "Ответ 1",
         reviewSent: false,
-        raiting: 0,
+        raiting: 3,
       },
       {
+        id: 14,
         question: "Вопрос 2",
         answer: "Ответ 2",
         reviewSent: false,
         raiting: 0,
       },
       {
+        id: 15,
         question: "Вопрос 3",
         answer: "Ответ 3",
         reviewSent: false,
-        raiting: 0,
+        raiting: 2,
       },
       {
+        id: 16,
         question: "Вопрос 4",
         answer: "Ответ 4",
         reviewSent: false,

@@ -9,30 +9,40 @@ export default function Question(props) {
     onClickFeedbackButton,
     categoriesList,
   } = props;
-  const { question, answer, reviewSent, raiting } = questionData;
+  const {
+    question,
+    answer,
+    reviewSent,
+    raiting,
+    isOpen = false,
+  } = questionData;
 
-  const [isOpenQuestion, setIsOpenQuestion] = React.useState(false);
+  const [isOpenQuestion, setIsOpenQuestion] = React.useState(isOpen);
+  const newArr = [...categoriesList];
 
   const containerClass = `question ${isOpenQuestion ? "question_active" : ""}`;
-  const buttonClass = `question__button question__text link-hover  ${
+  const buttonClass = `question__button question__text link-hover ${
     isOpenQuestion ? "question__button_close" : ""
   }`;
 
   function handleButtonClick() {
+    isOpenQuestion
+      ? (newArr[categoryIndex].questions[questionIndex].isOpen = false)
+      : (newArr[categoryIndex].questions[questionIndex].isOpen = true);
     setIsOpenQuestion(!isOpenQuestion);
   }
 
   function handleFeedbackButtonClick(answer) {
-    const newArr = [...categoriesList];
     newArr[categoryIndex].questions[questionIndex].reviewSent = true;
 
     answer
       ? (newArr[categoryIndex].questions[questionIndex].raiting += 1)
       : (newArr[categoryIndex].questions[questionIndex].raiting -= 1);
 
-    newArr[categoryIndex].raiting = newArr[categoryIndex].questions
-      .sort((a, b) => b.raiting - a.raiting)
-      .reduce((prValue, item) => prValue + item.raiting, 0);
+    newArr[categoryIndex].raiting = newArr[categoryIndex].questions.reduce(
+      (prValue, item) => prValue + item.raiting,
+      0
+    );
 
     onClickFeedbackButton(newArr);
   }

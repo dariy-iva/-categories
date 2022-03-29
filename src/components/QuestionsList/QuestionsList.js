@@ -5,24 +5,26 @@ import Question from "./Question/Question";
 export default function QuestionsList(props) {
   const {
     questionsList,
-    category,
     categoryIndex,
     onClickFeedbackButton,
     categoriesList,
   } = props;
+
   return (
     <ul className="questions">
-      {questionsList.map((question, index) => (
-        <li key={index+category.title} className="questions__item">
-          <Question
-            categoriesList={categoriesList}
-            questionData={question}
-            categoryIndex={categoryIndex}
-            questionIndex={index}
-            onClickFeedbackButton={onClickFeedbackButton}
-          />
-        </li>
-      ))}
+      {questionsList
+        .sort((a, b) => b.raiting - a.raiting)
+        .map((question, index) => (
+          <li key={question.id} className="questions__item">
+            <Question
+              categoriesList={categoriesList}
+              questionData={question}
+              categoryIndex={categoryIndex}
+              questionIndex={index}
+              onClickFeedbackButton={onClickFeedbackButton}
+            />
+          </li>
+        ))}
     </ul>
   );
 }

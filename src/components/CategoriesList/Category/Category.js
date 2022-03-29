@@ -25,7 +25,6 @@ export default function Category(props) {
         <QuestionsList
           categoriesList={categoriesList}
           questionsList={questions}
-          category={category}
           categoryIndex={categoryIndex}
           onClickFeedbackButton={onClickFeedbackButton}
         />
